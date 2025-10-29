@@ -31,14 +31,14 @@ export default function Home() {
             style={{ maxWidth: '1448px' }}
           >
             {/* Left Column - Text Content */}
-            <div className="flex flex-col gap-6" style={{ width: '724px' }}>
+            <div className="flex flex-col gap-6 w-full md:w-[724px]">
               {/* Headline */}
               <h1 
                 className="text-black"
                 style={{
                   fontFamily: 'var(--font-gordita), -apple-system, BlinkMacSystemFont, sans-serif',
                   fontWeight: 500,
-                  fontSize: '56px',
+                  fontSize: 'clamp(28px, 6vw, 56px)',
                   lineHeight: '120%',
                   letterSpacing: '0%',
                 }}
@@ -48,11 +48,11 @@ export default function Home() {
 
               {/* Descriptive Paragraph */}
               <p 
-                className="text-gray-700 max-w-xl text-base md:text-lg"
+                className="text-gray-700 w-full max-w-xl text-sm md:text-lg"
                 style={{
                   fontFamily: 'var(--font-euclid-circular), -apple-system, BlinkMacSystemFont, sans-serif',
                   fontWeight: 400,
-                  fontSize: '18px',
+                  fontSize: 'clamp(14px, 3.8vw, 18px)',
                   lineHeight: '150%',
                   letterSpacing: '0%',
                 }}
@@ -108,13 +108,13 @@ export default function Home() {
             </div>
             {/* Desktop Right Column - Image */}
             <div className="hidden md:block relative h-[896px] rounded-r-[40px] overflow-hidden md:-mt-6" style={{ width: '724px' }}>
-              <Image
+        <Image
                 src="/1c5ae816618838e0ddb6348afe0a601debd61f33.jpg"
                 alt="Laptop displaying website"
                 fill
                 className="object-cover"
-                priority
-              />
+          priority
+        />
               <div
                 className="absolute inset-0"
                 style={{ backgroundColor: '#8C8C8C', opacity: 0.5, mixBlendMode: 'multiply' }}
@@ -131,7 +131,7 @@ export default function Home() {
             style={{
               fontFamily: 'var(--font-gordita), -apple-system, BlinkMacSystemFont, sans-serif',
               fontWeight: 500,
-              fontSize: '56px',
+              fontSize: 'clamp(24px, 6vw, 56px)',
               lineHeight: '120%',
               letterSpacing: '0%',
             }}
@@ -164,7 +164,7 @@ export default function Home() {
                 style={{
                   fontFamily: 'var(--font-gordita), -apple-system, BlinkMacSystemFont, sans-serif',
                   fontWeight: 500,
-                  fontSize: '56px',
+                  fontSize: 'clamp(22px, 5.5vw, 56px)',
                   lineHeight: '120%',
                   letterSpacing: '0%',
                 }}
@@ -192,13 +192,13 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-8 md:gap-[120px]">
               <div className="flex flex-col gap-8 order-2 md:order-1">
                 <div className="flex flex-col gap-4">
-                  <h3 className="text-black" style={{ fontFamily: 'var(--font-gordita), -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 500, fontSize: '56px', lineHeight: '120%', letterSpacing: '0%' }}>Our Mission</h3>
+                  <h3 className="text-black" style={{ fontFamily: 'var(--font-gordita), -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 500, fontSize: 'clamp(22px, 5.5vw, 56px)', lineHeight: '120%', letterSpacing: '0%' }}>Our Mission</h3>
                   <p className="text-gray-700" style={{ fontFamily: 'var(--font-euclid-circular), -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 400, fontSize: '18px', lineHeight: '150%' }}>
                     To empower SMEs with smart systems that automate operations, drive sales, and enable data-driven growth, helping business owners save time, cut costs, and scale effortlessly.
                   </p>
                 </div>
                 <div className="flex flex-col gap-4">
-                  <h3 className="text-black" style={{ fontFamily: 'var(--font-gordita), -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 500, fontSize: '56px', lineHeight: '120%', letterSpacing: '0%' }}>Our Vision</h3>
+                  <h3 className="text-black" style={{ fontFamily: 'var(--font-gordita), -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 500, fontSize: 'clamp(22px, 5.5vw, 56px)', lineHeight: '120%', letterSpacing: '0%' }}>Our Vision</h3>
                   <p className="text-gray-700" style={{ fontFamily: 'var(--font-euclid-circular), -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 400, fontSize: '18px', lineHeight: '150%' }}>
                     To become the leading growth partner for African SMEs building a future where every business, no matter its size, can leverage AI and automation to compete on a global scale.
                   </p>
@@ -215,7 +215,7 @@ export default function Home() {
                 <Image src="/5b9e1ae206abe9e648d561e41b818104690d8767.jpg" alt="Workspace with laptop and notebook" fill className="object-cover" />
               </div>
               <div className="flex flex-col gap-6">
-                <h3 className="text-black" style={{ fontFamily: 'var(--font-gordita), -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 500, fontSize: '56px', lineHeight: '120%', letterSpacing: '0%' }}>Why Choose Launch Labs</h3>
+                <h3 className="text-black" style={{ fontFamily: 'var(--font-gordita), -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 500, fontSize: 'clamp(22px, 5.5vw, 56px)', lineHeight: '120%', letterSpacing: '0%' }}>Why Choose Launch Labs</h3>
                 <ul className="flex flex-col gap-3 list-disc list-inside text-gray-700" style={{ fontFamily: 'var(--font-euclid-circular), -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 400, fontSize: '18px', lineHeight: '150%' }}>
                   <li>End-to-end business systems</li>
                   <li>AI-powered automation (Cassidy)</li>
@@ -496,7 +496,7 @@ export default function Home() {
             className="mx-auto flex flex-col items-center justify-center overflow-hidden w-full"
             style={{
               width: '100%',
-              height: '415px',
+              height: 'auto',
               backgroundColor: '#0E6B67',
               borderRadius: '0px'
             }}
@@ -515,28 +515,28 @@ export default function Home() {
             {/* Marquee container */}
             <div className="relative w-full overflow-hidden py-4">
               <div
-                className="flex flex-nowrap items-center gap-10"
+                className="flex flex-nowrap items-center gap-8"
                 style={{
                   width: '200%',
                   animation: 'scrollX 30s linear infinite'
                 }}
               >
                 {/* Track (duplicated for seamless loop) */}
-                <div className="flex flex-nowrap items-center gap-10">
-                  <Image className="shrink-0" src="/56e5607b8ee3df7a5c0c49549b8b84a377a41a0b.png" alt="Logo 1" width={100} height={36} />
-                  <Image className="shrink-0" src="/358985bb8303b9609b920f9d89e4df4b9bcb7f5e.png" alt="Logo 2" width={100} height={36} />
-                  <Image className="shrink-0" src="/bb0e8e585bed1fd8c1c436e9e4978502598ecc8f.png" alt="Logo 3" width={100} height={36} />
-                  <Image className="shrink-0" src="/paystack_logo.svg.png" alt="Paystack" width={130} height={44} />
-                  <Image className="shrink-0" src="/39bc91949ae924030ebeb6ecb4b918e4324f2d46.png" alt="Logo 5" width={100} height={36} />
-                  <Image className="shrink-0" src="/Symbol.svg.png" alt="Logo 6" width={100} height={36} />
+                <div className="flex flex-nowrap items-center gap-8">
+                  <Image className="shrink-0" src="/56e5607b8ee3df7a5c0c49549b8b84a377a41a0b.png" alt="Logo 1" width={90} height={32} />
+                  <Image className="shrink-0" src="/358985bb8303b9609b920f9d89e4df4b9bcb7f5e.png" alt="Logo 2" width={90} height={32} />
+                  <Image className="shrink-0" src="/bb0e8e585bed1fd8c1c436e9e4978502598ecc8f.png" alt="Logo 3" width={90} height={32} />
+                  <Image className="shrink-0" src="/paystack_logo.svg.png" alt="Paystack" width={120} height={40} />
+                  <Image className="shrink-0" src="/39bc91949ae924030ebeb6ecb4b918e4324f2d46.png" alt="Logo 5" width={90} height={32} />
+                  <Image className="shrink-0" src="/Symbol.svg.png" alt="Logo 6" width={90} height={32} />
                 </div>
-                <div className="flex flex-nowrap items-center gap-10">
-                  <Image className="shrink-0" src="/56e5607b8ee3df7a5c0c49549b8b84a377a41a0b.png" alt="Logo 1" width={100} height={36} />
-                  <Image className="shrink-0" src="/358985bb8303b9609b920f9d89e4df4b9bcb7f5e.png" alt="Logo 2" width={100} height={36} />
-                  <Image className="shrink-0" src="/bb0e8e585bed1fd8c1c436e9e4978502598ecc8f.png" alt="Logo 3" width={100} height={36} />
-                  <Image className="shrink-0" src="/paystack_logo.svg.png" alt="Paystack" width={130} height={44} />
-                  <Image className="shrink-0" src="/39bc91949ae924030ebeb6ecb4b918e4324f2d46.png" alt="Logo 5" width={100} height={36} />
-                  <Image className="shrink-0" src="/Symbol.svg.png" alt="Logo 6" width={100} height={36} />
+                <div className="flex flex-nowrap items-center gap-8">
+                  <Image className="shrink-0" src="/56e5607b8ee3df7a5c0c49549b8b84a377a41a0b.png" alt="Logo 1" width={90} height={32} />
+                  <Image className="shrink-0" src="/358985bb8303b9609b920f9d89e4df4b9bcb7f5e.png" alt="Logo 2" width={90} height={32} />
+                  <Image className="shrink-0" src="/bb0e8e585bed1fd8c1c436e9e4978502598ecc8f.png" alt="Logo 3" width={90} height={32} />
+                  <Image className="shrink-0" src="/paystack_logo.svg.png" alt="Paystack" width={120} height={40} />
+                  <Image className="shrink-0" src="/39bc91949ae924030ebeb6ecb4b918e4324f2d46.png" alt="Logo 5" width={90} height={32} />
+                  <Image className="shrink-0" src="/Symbol.svg.png" alt="Logo 6" width={90} height={32} />
                 </div>
               </div>
             </div>
@@ -558,10 +558,9 @@ export default function Home() {
 
           {/* Block 1 */}
           <div
-            className="mx-auto mb-8 grid grid-cols-1 md:grid-cols-2 gap-6 items-center"
+            className="mx-auto mb-8 grid grid-cols-1 md:grid-cols-2 gap-6 items-center w-full"
             style={{
-              width: '1423px',
-              height: '511px',
+              maxWidth: '1423px',
               backgroundColor: '#EFF7F7',
               borderRadius: '25px',
             }}
@@ -597,10 +596,9 @@ export default function Home() {
 
           {/* Block 2 */}
           <div
-            className="mx-auto mb-8 grid grid-cols-1 md:grid-cols-2 gap-6 items-center"
+            className="mx-auto mb-8 grid grid-cols-1 md:grid-cols-2 gap-6 items-center w-full"
             style={{
-              width: '1423px',
-              height: '511px',
+              maxWidth: '1423px',
               backgroundColor: '#EFF7F7',
               borderRadius: '25px',
             }}
@@ -636,10 +634,9 @@ export default function Home() {
 
           {/* Block 3 */}
           <div
-            className="mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 items-center"
+            className="mx-auto grid grid-cols-1 md:grid-cols-2 gap-6 items-center w-full"
             style={{
-              width: '1423px',
-              height: '511px',
+              maxWidth: '1423px',
               backgroundColor: '#EFF7F7',
               borderRadius: '25px',
             }}
@@ -669,8 +666,8 @@ export default function Home() {
                 }}
               >
                 We deliver real-time performance dashboards and insights so you always know what’s working. Make informed decisions with clarity.
-              </p>
-            </div>
+          </p>
+        </div>
           </div>
         </section>
         {/* Contact Us Section (placed under How It Works) */}
@@ -715,7 +712,7 @@ export default function Home() {
                 style={{
                   fontFamily: 'var(--font-gordita), -apple-system, BlinkMacSystemFont, sans-serif',
                   fontWeight: 500,
-                  fontSize: '48px',
+                  fontSize: 'clamp(20px, 5.5vw, 48px)',
                   lineHeight: '120%'
                 }}
               >
@@ -770,7 +767,7 @@ export default function Home() {
                 style={{
                   fontFamily: 'var(--font-euclid-circular), -apple-system, BlinkMacSystemFont, sans-serif',
                   fontWeight: 500,
-                  fontSize: '40px',
+                  fontSize: 'clamp(18px, 5vw, 40px)',
                   lineHeight: '120%',
                   letterSpacing: '0%',
                   textAlign: 'center',
