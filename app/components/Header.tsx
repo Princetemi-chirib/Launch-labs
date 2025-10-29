@@ -8,7 +8,7 @@ export default function Header() {
   const [open, setOpen] = useState(false);
   return (
     <motion.header 
-      className="flex items-center justify-between w-full max-w-full"
+      className="relative z-30 flex items-center justify-between w-full max-w-full"
       style={{
         width: '100%',
         height: '95px',

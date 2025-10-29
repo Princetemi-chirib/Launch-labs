@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Header from "./components/Header";
@@ -23,44 +24,14 @@ export default function Home() {
             <Header />
           </div>
           
-          {/* Right Column - Image positioned under header */}
-          <div 
-            className="absolute overflow-hidden hidden md:block"
-            style={{
-              width: '724px',
-              height: '896px',
-              left: '724px',
-              top: 0,
-              zIndex: 0,
-              borderTopRightRadius: '40px',
-              borderBottomRightRadius: '40px',
-            }}
-          >
-        <Image
-              src="/1c5ae816618838e0ddb6348afe0a601debd61f33.jpg"
-              alt="Laptop displaying website"
-              fill
-              className="object-cover"
-          priority
-        />
-            {/* Overlay */}
-            <div 
-              className="absolute inset-0"
-              style={{
-                backgroundColor: '#8C8C8C',
-                opacity: 0.5,
-                mixBlendMode: 'multiply',
-              }}
-            />
-          </div>
-          
-          <motion.div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12 items-center relative z-10"
+          <motion.div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-12 items-center mx-auto"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
+            style={{ maxWidth: '1448px' }}
           >
             {/* Left Column - Text Content */}
-            <div className="flex flex-col gap-6">
+            <div className="flex flex-col gap-6" style={{ width: '724px' }}>
               {/* Headline */}
               <h1 
                 className="text-black"
@@ -135,6 +106,20 @@ export default function Home() {
                 />
               </div>
             </div>
+            {/* Desktop Right Column - Image */}
+            <div className="hidden md:block relative h-[896px] rounded-r-[40px] overflow-hidden md:-mt-6" style={{ width: '724px' }}>
+              <Image
+                src="/1c5ae816618838e0ddb6348afe0a601debd61f33.jpg"
+                alt="Laptop displaying website"
+                fill
+                className="object-cover"
+                priority
+              />
+              <div
+                className="absolute inset-0"
+                style={{ backgroundColor: '#8C8C8C', opacity: 0.5, mixBlendMode: 'multiply' }}
+              />
+            </div>
           </motion.div>
         </div>
       </section>
@@ -202,115 +187,36 @@ export default function Home() {
         </section>
         {/* Mission, Vision, and Why Choose Section */}
         <section className="px-4 md:px-12 py-12 md:py-16">
-          <div
-            className="grid grid-cols-1 md:grid-cols-2 mx-auto w-full md:w-[1370px] gap-10 md:gap-x-[120px] md:gap-y-[60px]"
-          >
-            {/* Left Column - Mission and Vision */}
-            <div className="flex flex-col gap-12">
-              {/* Our Mission */}
-              <div className="flex flex-col gap-4">
-                <h3 
-                  className="text-black"
-                  style={{
-                    fontFamily: 'var(--font-gordita), -apple-system, BlinkMacSystemFont, sans-serif',
-                    fontWeight: 500,
-                    fontSize: '56px',
-                    lineHeight: '120%',
-                    letterSpacing: '0%',
-                  }}
-                >
-                  Our Mission
-                </h3>
-                <p 
-                  className="text-gray-700"
-                  style={{
-                    fontFamily: 'var(--font-euclid-circular), -apple-system, BlinkMacSystemFont, sans-serif',
-                    fontWeight: 400,
-                    fontSize: '18px',
-                    lineHeight: '150%',
-                  }}
-                >
-                  To empower SMEs with smart systems that automate operations, drive sales, and enable data-driven growth, helping business owners save time, cut costs, and scale effortlessly.
-                </p>
+          <div className="mx-auto w-full md:w-[1370px] flex flex-col gap-16 md:gap-20">
+            {/* Row 2: Mission & Vision (text left) | Image right */}
+            <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-8 md:gap-[120px]">
+              <div className="flex flex-col gap-8 order-2 md:order-1">
+                <div className="flex flex-col gap-4">
+                  <h3 className="text-black" style={{ fontFamily: 'var(--font-gordita), -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 500, fontSize: '56px', lineHeight: '120%', letterSpacing: '0%' }}>Our Mission</h3>
+                  <p className="text-gray-700" style={{ fontFamily: 'var(--font-euclid-circular), -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 400, fontSize: '18px', lineHeight: '150%' }}>
+                    To empower SMEs with smart systems that automate operations, drive sales, and enable data-driven growth, helping business owners save time, cut costs, and scale effortlessly.
+                  </p>
+                </div>
+                <div className="flex flex-col gap-4">
+                  <h3 className="text-black" style={{ fontFamily: 'var(--font-gordita), -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 500, fontSize: '56px', lineHeight: '120%', letterSpacing: '0%' }}>Our Vision</h3>
+                  <p className="text-gray-700" style={{ fontFamily: 'var(--font-euclid-circular), -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 400, fontSize: '18px', lineHeight: '150%' }}>
+                    To become the leading growth partner for African SMEs building a future where every business, no matter its size, can leverage AI and automation to compete on a global scale.
+                  </p>
+                </div>
               </div>
-
-              {/* Image moved below Mission */}
-              <div 
-                className="relative overflow-hidden mt-4 mx-auto md:mx-0 w-full h-64 md:w-[674px] md:h-[452px] rounded-[40px]"
-              >
-                <Image
-                  src="/5b9e1ae206abe9e648d561e41b818104690d8767.jpg"
-                  alt="Workspace with laptop and notebook"
-                  fill
-                  className="object-cover"
-                />
+              <div className="relative overflow-hidden w-full h-64 md:w-[674px] md:h-[452px] rounded-[40px] mx-auto md:mx-0 order-1 md:order-2">
+                <Image src="/510ee954e17b1e8de21402c99c9e5d4d6085d66c.jpg" alt="Conference room meeting" fill className="object-cover" />
               </div>
-
-              {/* Our Vision */}
-              <div className="flex flex-col gap-4">
-                <h3 
-                  className="text-black"
-                  style={{
-                    fontFamily: 'var(--font-gordita), -apple-system, BlinkMacSystemFont, sans-serif',
-                    fontWeight: 500,
-                    fontSize: '56px',
-                    lineHeight: '120%',
-                    letterSpacing: '0%',
-                  }}
-                >
-                  Our Vision
-                </h3>
-                <p 
-                  className="text-gray-700"
-                  style={{
-                    fontFamily: 'var(--font-euclid-circular), -apple-system, BlinkMacSystemFont, sans-serif',
-                    fontWeight: 400,
-                    fontSize: '18px',
-                    lineHeight: '150%',
-                  }}
-                >
-                  To become the leading growth partner for African SMEs building a future where every business, no matter its size, can leverage AI and automation to compete on a global scale.
-          </p>
-        </div>
             </div>
 
-            {/* Right Column - Why Choose Launch Labs (moved lower) */}
-            <div className="flex flex-col gap-6 pt-2 md:pt-20">
-              {/* Image */}
-              <div 
-                className="relative overflow-hidden mx-auto md:mx-0 w-full h-64 md:w-[674px] md:h-[452px] rounded-[40px]"
-              >
-            <Image
-                  src="/510ee954e17b1e8de21402c99c9e5d4d6085d66c.jpg"
-                  alt="Conference room meeting"
-                  fill
-                  className="object-cover"
-                />
+            {/* Row 3: Why Choose (image left) | Text right */}
+            <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-8 md:gap-[120px]">
+              <div className="relative overflow-hidden w-full h-64 md:w-[674px] md:h-[452px] rounded-[40px] mx-auto md:mx-0">
+                <Image src="/5b9e1ae206abe9e648d561e41b818104690d8767.jpg" alt="Workspace with laptop and notebook" fill className="object-cover" />
               </div>
-
-              {/* Subtitle and List */}
               <div className="flex flex-col gap-6">
-                <h3 
-                  className="text-black"
-                  style={{
-                    fontFamily: 'var(--font-gordita), -apple-system, BlinkMacSystemFont, sans-serif',
-                    fontWeight: 500,
-                    fontSize: '56px',
-                    lineHeight: '120%',
-                    letterSpacing: '0%',
-                  }}
-                >
-                  Why Choose Launch Labs
-                </h3>
-                <ul 
-                  className="flex flex-col gap-3 list-disc list-inside text-gray-700"
-                  style={{
-                    fontFamily: 'var(--font-euclid-circular), -apple-system, BlinkMacSystemFont, sans-serif',
-                    fontWeight: 400,
-                    fontSize: '18px',
-                    lineHeight: '150%',
-                  }}
-                >
+                <h3 className="text-black" style={{ fontFamily: 'var(--font-gordita), -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 500, fontSize: '56px', lineHeight: '120%', letterSpacing: '0%' }}>Why Choose Launch Labs</h3>
+                <ul className="flex flex-col gap-3 list-disc list-inside text-gray-700" style={{ fontFamily: 'var(--font-euclid-circular), -apple-system, BlinkMacSystemFont, sans-serif', fontWeight: 400, fontSize: '18px', lineHeight: '150%' }}>
                   <li>End-to-end business systems</li>
                   <li>AI-powered automation (Cassidy)</li>
                   <li>Data-driven insights and reporting</li>
