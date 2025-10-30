@@ -62,7 +62,9 @@ export default function Home() {
 
               {/* Call to Action Buttons */}
               <div className="flex flex-col sm:flex-row gap-2 mt-4">
-                <button 
+                <a 
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSf0tAoYVuoRBsEZi_PJZPfdaZ044aIF9FbzAtOKqCJSyTp0cQ/viewform?usp=dialog"
+                  target="_blank" rel="noopener noreferrer"
                   className="text-white font-medium hover:opacity-90 transition-opacity flex items-center justify-center"
                   style={{
                     width: '203px',
@@ -74,11 +76,14 @@ export default function Home() {
                     paddingLeft: '20px',
                     gap: '8px',
                     background: 'linear-gradient(to right, #60a5fa, #9333ea)',
+                    textDecoration: 'none'
                   }}
                 >
                   Get Started
-                </button>
-                <button 
+                </a>
+                <a 
+                  href="https://wa.me/2347083809278?text=I%20need%20a%20demo"
+                  target="_blank" rel="noopener noreferrer"
                   className="text-white font-medium hover:bg-teal-800 transition-colors flex items-center justify-center"
                   style={{
                     width: '203px',
@@ -90,10 +95,11 @@ export default function Home() {
                     paddingLeft: '20px',
                     gap: '8px',
                     backgroundColor: '#0f766e',
+                    textDecoration: 'none'
                   }}
                 >
                   Book a Demo
-                </button>
+                </a>
               </div>
               {/* Mobile hero image */}
               <div className="md:hidden relative w-full h-64 rounded-lg overflow-hidden">
@@ -243,7 +249,7 @@ export default function Home() {
                 style={{
                   fontFamily: 'var(--font-gordita), -apple-system, BlinkMacSystemFont, sans-serif',
                   fontWeight: 500,
-                  fontSize: '56px',
+                  fontSize: 'clamp(24px, 6vw, 56px)',
                   lineHeight: '120%',
                   letterSpacing: '0%',
                 }}
@@ -256,8 +262,8 @@ export default function Home() {
                   style={{
                     fontFamily: 'var(--font-gordita), -apple-system, BlinkMacSystemFont, sans-serif',
                     fontWeight: 500,
-                    fontSize: '28px',
-                    lineHeight: '74.24px',
+                    fontSize: 'clamp(18px, 5vw, 28px)',
+                    lineHeight: '130%',
                     letterSpacing: '0.64px',
                     verticalAlign: 'middle',
                   }}
@@ -265,11 +271,11 @@ export default function Home() {
                   Smart systems for modern businesses
                 </h3>
                 <p 
-                  className="text-gray-700 w-full text-left whitespace-nowrap"
+                  className="text-gray-700 w-full text-left"
                   style={{
                     fontFamily: 'var(--font-euclid-circular), -apple-system, BlinkMacSystemFont, sans-serif',
                     fontWeight: 400,
-                    fontSize: '18px',
+                    fontSize: 'clamp(14px, 3.8vw, 18px)',
                     lineHeight: '150%',
                   }}
                 >
@@ -518,7 +524,9 @@ export default function Home() {
                 className="flex flex-nowrap items-center gap-8"
                 style={{
                   width: '200%',
-                  animation: 'scrollX 30s linear infinite'
+                  animation: 'scrollX 30s linear infinite',
+                  whiteSpace: 'nowrap',
+                  willChange: 'transform'
                 }}
               >
                 {/* Track (duplicated for seamless loop) */}
@@ -549,7 +557,7 @@ export default function Home() {
             style={{
               fontFamily: 'var(--font-gordita), -apple-system, BlinkMacSystemFont, sans-serif',
               fontWeight: 500,
-              fontSize: '56px',
+              fontSize: 'clamp(24px, 6vw, 56px)',
               lineHeight: '120%'
             }}
           >
@@ -776,12 +784,14 @@ export default function Home() {
               >
                 Everything Your Business Needs to Run, Grow & Succeed. All in One System
               </h3>
-              <button
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSf0tAoYVuoRBsEZi_PJZPfdaZ044aIF9FbzAtOKqCJSyTp0cQ/viewform?usp=dialog"
+                target="_blank" rel="noopener noreferrer"
                 className="rounded-lg px-6 py-3 text-black bg-white/90 hover:bg-white"
-                style={{ borderRadius: '40px' }}
+                style={{ borderRadius: '40px', textDecoration: 'none' }}
               >
                 Get Started
-              </button>
+              </a>
             </div>
           </div>
         </section>
