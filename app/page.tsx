@@ -496,60 +496,6 @@ export default function Home() {
             </div>
           </div>
         </section>
-        {/* Tools We Use Section */}
-        <section id="tools" className="py-12">
-          <div
-            className="mx-auto flex flex-col items-center justify-center overflow-hidden w-full"
-            style={{
-              width: '100%',
-              height: 'auto',
-              backgroundColor: '#0E6B67',
-              borderRadius: '0px'
-            }}
-          >
-            <h2
-              className="text-white mb-10"
-              style={{
-                fontFamily: 'var(--font-gordita), -apple-system, BlinkMacSystemFont, sans-serif',
-                fontWeight: 500,
-                fontSize: '56px',
-                lineHeight: '120%'
-              }}
-            >
-              Tools We Use
-            </h2>
-            {/* Marquee container */}
-            <div className="relative w-full overflow-hidden py-4">
-              <div
-                className="flex flex-nowrap items-center gap-8"
-                style={{
-                  width: '200%',
-                  animation: 'scrollX 30s linear infinite',
-                  whiteSpace: 'nowrap',
-                  willChange: 'transform'
-                }}
-              >
-                {/* Track (duplicated for seamless loop) */}
-                <div className="flex flex-nowrap items-center gap-8">
-                  <Image className="shrink-0" src="/56e5607b8ee3df7a5c0c49549b8b84a377a41a0b.png" alt="Logo 1" width={90} height={32} />
-                  <Image className="shrink-0" src="/358985bb8303b9609b920f9d89e4df4b9bcb7f5e.png" alt="Logo 2" width={90} height={32} />
-                  <Image className="shrink-0" src="/bb0e8e585bed1fd8c1c436e9e4978502598ecc8f.png" alt="Logo 3" width={90} height={32} />
-                  <Image className="shrink-0" src="/paystack_logo.svg.png" alt="Paystack" width={120} height={40} />
-                  <Image className="shrink-0" src="/39bc91949ae924030ebeb6ecb4b918e4324f2d46.png" alt="Logo 5" width={90} height={32} />
-                  <Image className="shrink-0" src="/Symbol.svg.png" alt="Logo 6" width={90} height={32} />
-                </div>
-                <div className="flex flex-nowrap items-center gap-8">
-                  <Image className="shrink-0" src="/56e5607b8ee3df7a5c0c49549b8b84a377a41a0b.png" alt="Logo 1" width={90} height={32} />
-                  <Image className="shrink-0" src="/358985bb8303b9609b920f9d89e4df4b9bcb7f5e.png" alt="Logo 2" width={90} height={32} />
-                  <Image className="shrink-0" src="/bb0e8e585bed1fd8c1c436e9e4978502598ecc8f.png" alt="Logo 3" width={90} height={32} />
-                  <Image className="shrink-0" src="/paystack_logo.svg.png" alt="Paystack" width={120} height={40} />
-                  <Image className="shrink-0" src="/39bc91949ae924030ebeb6ecb4b918e4324f2d46.png" alt="Logo 5" width={90} height={32} />
-                  <Image className="shrink-0" src="/Symbol.svg.png" alt="Logo 6" width={90} height={32} />
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
         {/* How It Works Section (moved below Tools) */}
         <section id="how-it-works" className="px-6 md:px-12 py-12 md:py-16">
           <h2
